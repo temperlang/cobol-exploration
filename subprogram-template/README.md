@@ -4,7 +4,7 @@ GNU tools:
 mkdir -p build && \
 g++ -c repeat.cpp -o build/repeat.o && \
 ar rcs build/librepeat.a build/repeat.o && \
-cobc -x main.cob -fstatic-call -Lbuild -lrepeat -o build/main && \
+cobc -x main.cob repeat-wrapper.cob -fstatic-call -Lbuild -lrepeat -o build/main && \
 ./build/main
 ```
 
@@ -18,7 +18,7 @@ Powershell with MSVC tools (noting the warning below that seems to be ok):
 if (-not (Test-Path build)) { mkdir build }
 cl /c /EHsc /Fo:build\ repeat.cpp
 lib /out:build\repeat.lib build\repeat.obj
-cobc -x main.cob -fstatic-call build\repeat.lib -o build\main
+cobc -x main.cob repeat-wrapper.cob -fstatic-call build\repeat.lib -o build\main
 .\build\main
 ```
 

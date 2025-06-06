@@ -12,7 +12,3 @@
                repeat-in-str repeat-count repeat-out-buf
            display "result: [" repeat-out-buf "]"
            stop run.
-
-      ****** TODO Move experiment to shared repo!
-
-       copy repeat-wrapper.
