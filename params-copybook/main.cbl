@@ -3,12 +3,12 @@
 
        data division.
        working-storage section.
-       copy repeat-params.
+       copy rep-repeat-params.
 
        procedure division.
-           move "hi" to repeat-in-str
-           move 3 to repeat-count
-           call "repeat-wrapper" using
-               repeat-in-str repeat-count repeat-out-buf
-           display "result: [" repeat-out-buf "]"
+           move "hi" to rep-repeat-in
+           move 3 to rep-repeat-count
+           call "rep-repeat" using
+               rep-repeat-in rep-repeat-count rep-repeat-out
+           display "result: [" rep-repeat-out "]"
            stop run.
