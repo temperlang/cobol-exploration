@@ -9,3 +9,6 @@ Currently just tested on GnuCobol. Currently two explorations:
   params-copybook in ways. This is an attempt to templatize the params copybook
   and the wrapper subprogram to allow choosing text pic lengths with the copy
   `replacing` feature.
+
+Although tested only on GnuCobol so far, the intent is that the this can be made
+to work on MicroFocus/Rocket and also on z/OS Cobol.
