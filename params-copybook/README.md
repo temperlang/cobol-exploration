@@ -9,7 +9,7 @@ cobc -x main.cbl repeat-wrapper.cbl -fstatic-call -Lbuild -lrepeat -o build/main
 ```
 
 ```
-Result: [Hi        Hi        Hi                                                                             ]
+result: [Hi        Hi        Hi                                                                             ]
 ```
 
 Powershell with MSVC tools (noting the warning below that seems to be ok):
@@ -31,7 +31,7 @@ Microsoft (R) Library Manager Version 14.43.34810.0
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
 Warning: corrupt .drectve at end of def file
-Result: [Hi        Hi        Hi                                                                             ]
+result: [Hi        Hi        Hi                                                                             ]
 ```
 
 If just C, can do this:
