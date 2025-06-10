@@ -11,4 +11,4 @@
            call "rep-repeat" using
                rep-repeat-in rep-repeat-count rep-repeat-out
            display "result: [" rep-repeat-out "]"
-           stop run.
+           goback.
