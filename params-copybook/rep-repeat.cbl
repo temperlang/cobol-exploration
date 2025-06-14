@@ -3,8 +3,8 @@
 
        data division.
        working-storage section.
-       01  in-len  pic 9(4) comp-5.
-       01  out-len pic 9(4) comp-5.
+       01  in-len  pic 9(9) comp-5.
+       01  out-len pic 9(9) comp-5.
 
        linkage section.
        copy rep-repeat-params.

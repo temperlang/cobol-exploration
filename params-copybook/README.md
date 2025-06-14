@@ -14,39 +14,31 @@
   Doesn't know about Cobol at all.
 - repeat.cpp: C++ function definition. Doesn't know about Cobol at all.
 
-## Things that seem to work
+## Building and running
 
-Posix shell and GNU tools:
+Use any of these different scripts as appropriate:
 
-```sh
-mkdir -p build && \
-g++ -c repeat.cpp -o build/repeat.o && \
-ar rcs build/librepeat.a build/repeat.o && \
-g++ -c repeat-cobol.cpp -o build/repeat-cobol.o && \
-cobc -fstatic-call -x main.cbl rep-repeat.cbl \
-    build/repeat-cobol.o -Lbuild -lrepeat -lstdc++ -o build/main && \
-./build/main
+- build-run-gnu.sh
+- build-run-gnu.cmd
+- build-run-microfocus.cmd
+
+You also need to ensure a proper environment. For the GnuCOBOL options, just
+make sure things are on your path.
+
+For MicroFocus/OpenText/Rocket, start a Micro Focus 64-bit terminal session,
+then also ensure Microsoft Visual Studio tools are available, such as by:
+
+```cmd
+"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
 ```
+
+Currently expected output from the demo:
 
 ```
 result: [Hi        Hi        Hi                                                                             ]
 ```
 
-Powershell and GNU tools:
-
-```ps1
-if (-not (Test-Path build)) { mkdir build }
-g++ -c repeat.cpp -o build/repeat.o && `
-ar rcs build/librepeat.a build/repeat.o && `
-g++ -c repeat-cobol.cpp -o build/repeat-cobol.o && `
-cobc -fstatic-call -x main.cbl rep-repeat.cbl `
-    build/repeat-cobol.o -Lbuild -lrepeat -lstdc++ -o build/main && `
-./build/main
-```
-
-```
-result: [hi        hi        hi                                                                              ]
-```
+MSVC and Rocket tools also have build output display at present.
 
 ## Things that probably won't work for us
 
