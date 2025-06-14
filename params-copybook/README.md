@@ -35,7 +35,7 @@ then also ensure Microsoft Visual Studio tools are available, such as by:
 Currently expected output from the demo:
 
 ```
-result: [Hi        Hi        Hi                                                                             ]
+result: [hi        hi        hi                                                                             ]
 ```
 
 MSVC and Rocket tools also have build output display at present.
